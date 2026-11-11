@@ -1,0 +1,41 @@
+# SPDX-FileCopyrightText: 2025 Digg - Agency for Digital Government
+#
+# SPDX-License-Identifier: CC0-1.0
+
+# Artifacts Configuration for wallet-verifier-test-web
+# Defines what to build and where to publish
+
+# The container image is signed keyless with Sigstore and carries SBOM and
+# SLSA provenance attestations. The release files keep their OpenPGP .asc
+# signatures, made with the key in RELEASE_GPG_PRIVATE_KEY.
+sign:
+  method: sigstore
+  files-method: gpg
+
+# The release commit and the final tag are signed with the GPG key in
+# RELEASE_GPG_PRIVATE_KEY, as before.
+git-signing:
+  method: gpg
+
+artifacts:
+  # The packed application is a release file. There is no package registry
+  # target: package.json is private and has no owner scope, which GitHub
+  # Packages requires.
+  - name: wallet-verifier-test-web
+    project-type: npm
+    working-directory: .
+    build-type: application
+    config:
+      # The project's Node version. Forge CI builds and packs this artifact
+      # in the runtime image the workflow passes as runtime-image-node, and
+      # the only one it ships today is Node 24.
+      node-version: 26
+
+containers:
+  # Dockerfile.build installs and builds the Nuxt application from the
+  # source itself, on Node 26; it copies nothing from the packed artifact.
+  - name: wallet-verifier-test-web
+    from: [wallet-verifier-test-web]
+    container-file: src/main/docker/Dockerfile.build
+    context: .
+    platforms: linux/amd64,linux/arm64

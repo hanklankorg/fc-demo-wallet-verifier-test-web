@@ -1,0 +1,49 @@
+# SPDX-FileCopyrightText: 2024 Digg - The Agency for Digital Government
+#
+# SPDX-License-Identifier: CC0-1.0
+
+# The lint plan of the pull request gate: Forge CI runs `nanolinter verify`
+# against it. The checks are the ones `just lint-all` runs, with the SAST
+# and dependency scans the pull request gate ran before.
+# `nanolinter explain --all` lists more checks.
+
+[detect]
+auto = true
+
+[verify]
+checks = [
+  "version-control",
+  "commits",
+  "secrets",
+  "sast",
+  "osv",
+  "yaml",
+  "markdown",
+  "shell",
+  "shell-format",
+  "actions",
+  "license",
+  "xml",
+  "container",
+  "node-eslint",
+  "node-format",
+]
+
+[policy]
+block = [
+  "version-control",
+  "commits",
+  "secrets",
+  "sast",
+  "osv",
+  "yaml",
+  "markdown",
+  "shell",
+  "shell-format",
+  "actions",
+  "license",
+  "xml",
+  "container",
+  "node-eslint",
+  "node-format",
+]

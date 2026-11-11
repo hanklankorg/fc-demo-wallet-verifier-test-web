@@ -4,6 +4,9 @@
 
 name: Pull Request Workflow
 
+# Forge CI owns the lint and security gate: the checks of nanolinter.toml,
+# which fail the pull request on a finding. The Nuxt tests run in the test
+# job below.
 on:
   pull_request:
     branches:
@@ -17,22 +20,32 @@ permissions:
 
 jobs:
   pr-checks:
-    uses: diggsweden/reusable-ci/.github/workflows/pullrequest-orchestrator.yml@617cb32268cb6aefdfa4117b4159d37e3b47d7b3 # v2.8.3
-    secrets: inherit # Pass org-level secrets (NPM token if private packages)
+    uses: diggsweden/forge-ci/.github/workflows/pullrequest-orchestrator.yml@PIN_FORGE_CI_SHA # v0.90.0
+    secrets:
+      # Optional: uploads lint security findings (SARIF) to Code Scanning.
+      CODE_SCANNING_TOKEN: ${{ secrets.CODE_SCANNING_TOKEN }}
     permissions:
+      actions: read # Download workflow result artifacts
       contents: read # Clone repository and read source code
-      packages: read # Access private NPM packages from GitHub registry
-      security-events: write # Upload ESLint/security findings to GitHub Security tab
     with:
-      reusable-ci-ref: d31c989acd139c3e8754e116496c826af8dbbca0
+      # The full commit the uses: ref above names; every job of the route runs
+      # the CLI built in this run from exactly this commit.
+      forge-ci-binary-ref: PIN_FORGE_CI_SHA # v0.90.0
+      # Pinned by digest and admitted before any job runs; replace FIXME with
+      # the digests of the release you call (docs/runtime-images.md).
+      runtime-image: ghcr.io/diggsweden/forge-ci-runtime-base@sha256:0000000000000000000000000000000000000000000000000000000000000000 # FIXME v0.90.0 digest
+      canonical-builder-image: ghcr.io/diggsweden/forge-ci-runtime-go-1.27@sha256:0000000000000000000000000000000000000000000000000000000000000000 # FIXME v0.90.0 digest
       project-type: npm
-      # Use devbase-check linting (replaces megalint, commitlint, licenselint)
-      linters.devbasecheck: true
-      linters.megalint: false
-      linters.commitlint: false
-      linters.licenselint: false
-      linters.publiccodelint: false # No publiccode.yml file in this project
+      # The lint image, pinned by digest: the plan job refuses a tag.
+      nanolinter-image: ghcr.io/itiquette/nanolinter:javascript-typescript@sha256:PIN_DIGEST
+      lint-engine: nanolinter
+      # Lint findings fail the pull request, as the lint job did before.
+      # Dependency advisories are reported and do not fail it: the scan
+      # covers every dependency, not only the ones a pull request changes.
+      enforce-lint: true
 
+  # The project's tests. The orchestrator never runs them; require this job
+  # and pr-checks as status checks.
   test:
     needs: [pr-checks]
     if: always() # Run tests even if linting fails (get full CI feedback)
