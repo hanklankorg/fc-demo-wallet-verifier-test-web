@@ -29,12 +29,13 @@ checks = [
   "node-format",
 ]
 
+# SAST findings are reported and do not fail the pull request: "sast" runs
+# under [verify] and is not listed here.
 [policy]
 block = [
   "version-control",
   "commits",
   "secrets",
-  "sast",
   "osv",
   "yaml",
   "markdown",
