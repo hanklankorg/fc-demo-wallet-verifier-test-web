@@ -2,7 +2,7 @@
 #
 # SPDX-License-Identifier: CC0-1.0
 
-# Release Workflow Dev
+# Release Snapshot Workflow
 #
 # A development snapshot of a branch: Forge CI's snapshot orchestrator packs
 # the application, builds the container image from the source and publishes
@@ -13,7 +13,7 @@
 # Triggers:
 # - Manual workflow dispatch, on the branch to snapshot
 
-name: Release Workflow Dev
+name: Release Snapshot Workflow
 
 on:
   workflow_dispatch:
@@ -26,7 +26,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  dev-release:
+  snapshot-release:
     permissions:
       actions: read # Read the run's artifacts
       contents: read # Read code for building

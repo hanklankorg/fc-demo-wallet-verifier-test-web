@@ -7,7 +7,7 @@
 # the version, writes the changelog and creates the final vX.Y.Z tag, never
 # you. It publishes the image to ghcr.io and the GitHub release with the
 # packed application.
-name: Release
+name: Release Workflow
 
 on:
   push:
