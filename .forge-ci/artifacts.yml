@@ -9,9 +9,10 @@
 # SLSA provenance attestations. The release files keep their OpenPGP .asc
 # signatures, made with the key in RELEASE_GPG_PRIVATE_KEY.
 sign:
-  method: sigstore
+  method: kms
+  key: env://COSIGN_KEY
+  transparency: none
   files-method: gpg
-
 # The release commit and the final tag are signed with the GPG key in
 # RELEASE_GPG_PRIVATE_KEY, as before.
 git-signing:

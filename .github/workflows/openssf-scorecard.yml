@@ -20,12 +20,12 @@ jobs:
       actions: read
       contents: read
       id-token: write
-    uses: diggsweden/forge-ci/.github/workflows/security-openssf-scorecard.yml@PIN_FORGE_CI_SHA # v0.90.0
+    uses: hanklankorg/fc-forge-ci/.github/workflows/security-openssf-scorecard.yml@d33ea2bd2260bad172b2af3a79d2a2f066dfc293 # v0.90.0
     secrets:
       # Uploads the Scorecard results (SARIF) to Code Scanning.
       CODE_SCANNING_TOKEN: ${{ secrets.CODE_SCANNING_TOKEN }}
     with:
-      forge-ci-binary-ref: PIN_FORGE_CI_SHA # v0.90.0
+      forge-ci-binary-ref: d33ea2bd2260bad172b2af3a79d2a2f066dfc293
       # The SARIF upload job runs in this image with its baked forge-ci.
-      runtime-image: ghcr.io/diggsweden/forge-ci-runtime-base@sha256:0000000000000000000000000000000000000000000000000000000000000000 # FIXME v0.90.0 digest
+      runtime-image: ghcr.io/hanklankorg/fc-forge-ci/forge-ci-runtime-base@sha256:9864c261c1b2f71d46eac2520f2e66de6b1ceb03c50f8d91acd19ddbccdd53e8 # FIXME v0.90.0 digest
       publish-results: true
