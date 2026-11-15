@@ -5,393 +5,21 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [0.1.19] - 2026-11-04
-
-### Changed
-
-- Merge pull request #172 from diggsweden/renovate/npm-happy-dom-vulnerability
-- Bump dependencies to avoid vulnerabilities
-- Update dependency happy-dom to v21 [security]
-- Merge pull request #173 from diggsweden/renovate/dev-dependencies
-- Sync package lock
-- Update dev dependencies
-- Merge pull request #170 from diggsweden/fix/renovate-npm-package-lock
-- Docs/document demo mode (#171)
-- Merge pull request #169 from diggsweden/renovate/dev-dependencies
-- Update dev dependencies
-
-### Fixed
-
-- Sync package lock
-- Configure renovate to run npm install twice
-- Sync npm package lock
-
-## [0.1.18] - 2026-10-19
-
-### Changed
-
-- Use response mode direct_post.jwt
-
-
-## [0.1.17] - 2026-10-14
+## [0.1.20] - 2026-11-15
 
 ### Added
 
 - Add name and other address to matcentralen
-
-### Changed
-
-- Make lighter gray text more accessible
-- Improve ux
-- Create a realistic grocery scenario
-- Create a realistic vaccination scenario
-
-
-## [0.1.16] - 2026-10-13
-
-### Changed
-
-- Merge pull request #167 from diggsweden/chore/bump-source-map-js
-- Bump source-map-js to version 1.2.2
-- Merge pull request #166 from diggsweden/renovate/testing-dependencies
-- Sync .nuxtrc
-- Update dependency @nuxt/test-utils to v4.3.3
-
-### Fixed
-
-- Sync package lock
-
-
-## [0.1.15] - 2026-10-07
-
-### Changed
-
-- Merge pull request #164 from diggsweden/renovate/lock-file-maintenance
-- Update npm dependencies
-- Merge pull request #163 from diggsweden/renovate/testing-dependencies
-- Update dependency @vue/test-utils to v2.5.1
-- Merge pull request #161 from diggsweden/renovate/testing-dependencies
-- Pin dependencies
-
-### Fixed
-
-- Sync package lock
-- Sync package lock
-
-
-## [0.1.14] - 2026-09-15
-
-### Changed
-
-- Merge pull request #160 from diggsweden/chore/update-npm-dependencies
-- Update npm dependencies
-- Use global fetch to retrieve verifier status
-- Reset state before each test instead of after
-- Update dependency vitest to v4.1.11 [security] (#159)
-
-
-## [0.1.13] - 2026-09-08
-
-### Changed
-
-- Merge pull request #158 from diggsweden/chore/bump-vitejs-plugin-vue-to-6.0.8
-- Bump @vitejs/plugin-vue to 6.0.8
-- Update package-lock.json
-- Update vue ecosystem
-- Merge pull request #154 from diggsweden/fix/client-logger-browser-safe
-
-### Fixed
-
-- Cover client logger console output
-- Log to browser console instead of node streams
-
-
-## [0.1.12] - 2026-08-27
-
-### Changed
-
-- Merge pull request #151 from diggsweden/fix/update-vct-payload
-- Update vct payload
-- Merge pull request #136 from diggsweden/renovate/nginx-alpine
-- Update nginx:alpine docker digest to 4a73073
-- Merge pull request #150 from diggsweden/fix/remove-mise-paranoid-setting
-
-### Fixed
-
-- Use correct pattern
-
-### Removed
-
-- Remove mise paranoid setting
-
-
-## [0.1.11] - 2026-08-25
-
-### Changed
-
-- Merge pull request #147 from diggsweden/renovate/vue-ecosystem
-- Update vue ecosystem
-
-### Fixed
-
-- Sync package lock file
-
-
-## [0.1.10] - 2026-08-04
-
-### Changed
-
-- Update payload structure for eudi backend v0.11.0 (#148)
-- Update dependency postcss to v8.5.23 [security] (#149)
-- Update dependency postcss to v8.5.18 [security] (#145)
-
-
-## [0.1.9] - 2026-07-20
-
-### Changed
-
-- Merge pull request #144 from diggsweden/renovate/vue-ecosystem
-- Update vue ecosystem
-- Update diggsweden/reusable-ci action to v2.8.3 (#141)
-
-### Fixed
-
-- Update package lock after renovate changes
-
-
-## [0.1.8] - 2026-07-10
-
-### Changed
-
-- Merge pull request #140 from diggsweden/build/use-node-version-26
-- Explicitly allow install scripts of node dependencies
-- Use node version 26
-- Merge pull request #108 from diggsweden/renovate/actions-setup-node-6.x
-- Update actions/setup-node action to v6
-
-### Removed
-
-- Remove depreacted npm setting 'always-auth'
-
-
-## [0.1.7] - 2026-07-09
-
-### Added
-
 - Add missing newline at end of file
-
-### Changed
-
-- Merge pull request #139 from diggsweden/chore/bump-vitest-to-4.1.0
-- Move nuxt/test-utils to dev dependencies
-- Bump vitest to 4.1.0
-- Merge pull request #138 from diggsweden/fix/address-opengrep-issues
-- Ignore IntelliJ project file
-
-### Fixed
-
-- Set minimum release age for npm dependencies
-- Set minimum release age for npm dependencies
-- Restrict HTTP upgrade to websockets only
-- Exclude test sources from OpenGrep scanning
-- Exclude GitHub workflow files from OpenGrep scanning
-
-
-## [0.1.6] - 2026-07-01
-
-### Added
-
 - Add tests for logging PID presentation failure
 - Add new logging
-
-### Changed
-
-- Merge pull request #137 from diggsweden/feat/add-new-logg
-- Pin dependency @vue/test-utils to 2.4.6 (#135)
-- Update dependency vitest to v3.2.6 [security] (#132)
-- Merge pull request #133 from diggsweden/chore/update-codeowners
-- Bump reusable-ci to v2.8.2
-- Update dependency postcss to v8.5.10 [security] (#130)
-- Merge pull request #129 from diggsweden/fix/use-main-version-of-reusable-integration
-- Merge pull request #128 from diggsweden/chore/update-copyright
-- Update copyright year to 2026
-- Update copyright holder
-- Merge pull request #127 from diggsweden/chore/bump-reusable-integration-workflow
-- Bump reusable integration workflow
-- Merge pull request #126 from diggsweden/chore/bump-reusable-integration-workflow
-- Bump gommitlint to 0.9.10, switch rumdl from ubi to aqua
-- Bump reusable-ci to v2.7.9
-
-### Fixed
-
-- Assert log messages
-- Use main version of reusable integration script
-- Bump reusable integration workflow
-
-
-## [0.1.5] - 2026-04-10
-
-### Changed
-
-- Feature/vp token parser multiple credentials (#124)
-- Merge pull request #122 from diggsweden/fix/container-file-not-found
-- Merge pull request #123 from diggsweden/feature/ecosystem-integration-test
-- Use reusable ecosystem integration workflow
-- Update dependency happy-dom to v20.8.9 [security] (#121)
-- Update dependency happy-dom to v20.8.8 [security] (#120)
-
-### Fixed
-
-- Bump release-dev-workflow to 2.7.6
-
-
-## [0.1.4] - 2026-03-25
-
-### Added
-
 - Add new demopage biocentralen (#117)
-
-### Changed
-
-- Scorecard should not have ref field
-
-
-## [0.1.3] - 2026-03-23
-
-### Changed
-
-- Use reuseable ci v2.7.3
-- Upgrade to reusable-ci 2.7.1
-
-
-## [0.1.2] - 2026-03-18
-
-### Added
-
 - Add missing lint-version-control recipe
 - Address test data as flat object structure
-
-### Changed
-
-- Upgrade to reusable-ci 2.7
-- Merge pull request #115 from diggsweden/chore/update-verifier-image
-- Update eudi-srv-verifier-endpoint to v0.8.0
-- Feat/matcentralen (#114)
-- Merge pull request #113 from diggsweden/feat/address-query
-- Update matcentralen DCQL query with address
-
-
-## [0.1.1] - 2026-03-10
-
-### Changed
-
-- Bump workflows to use reusable-ci v2.6.1 (#112)
-
-
-## [0.1.0] - 2026-03-10
-
-### Changed
-
-- Multiple demo apps support
-
-
-## [0.0.10] - 2026-02-19
-
-### Changed
-
-- Merge pull request #110 from diggsweden/feat/make-it-more-demoable
-- Rebrand strumpsorteringscentralen and examplify additions of new services
-- Update tailwind ecosystem (#106)
-- Update actions/checkout action to v4.3.1 (#105)
-- Pin dependencies (#104)
-- Pin dependencies (#103)
-- Update node.js to be08b7d (#68)
-- Lock file maintenance (#74)
-- Update nginx:alpine docker digest to 1d13701 (#93)
-- Migrate config renovate.json (#95)
-
-
-## [0.0.9] - 2026-02-11
-
-### Added
-
 - Add package-lock file for updating nuxt and vue-router (#102)
 - Add build as an allowed conventional commit type (#100)
-
-### Changed
-
-- Migrate dependency happy-dom to v20 [security] (#101)
-
-
-## [0.0.8] - 2026-01-26
-
-### Changed
-
-- Merge pull request #99 from diggsweden/feat/small-improvements
-- Make the verify page more responsive
-- Use reuseable ci 2.6.0
-- Change name, improve dev doc
-- Sync package lock json
-
-### Fixed
-
-- Change default backend host to match wallet-ecosystem
-- Correct lintwarning justfile mise
-- Correct lintwarnings for docs, container,nvmrc
-
-
-## [0.0.7] - 2025-12-11
-
-### Changed
-
-- Update justfile and reuseableci
-- Pin sha and version
-- Trim renovate, openssf
-- Adjust settings
-- Use base renovate config
-- Use reuseable-ci v2
-- Use reusable-ci v1
-- Update dependency tailwindcss to v4.1.14 (#92)
-- Update dependency typescript to v5.9.3 (#91)
-- Update docker/login-action action to v3.6.0 (#90)
-
-
-## [0.0.6] - 2025-09-22
-
-### Added
-
 - Add arm64 image, closes #81
 - Add missing license headers
-
-### Changed
-
-- Merge pull request #87 from danneleaf/main
-- Update dependency nuxt to v3.19.2 (#86)
-- Set license as precondition to test
-- Change old spdx header to modern
-- Replace obsolete ci jobs, governance
-- Update step-security/harden-runner action to v2.13.1 (#84)
-- Update dependency nuxt-qrcode to v0.4.8 (#83)
-- Merge pull request #82 from diggsweden/chore/backport-bump-node-image
-- Version control node version for nvm
-- Version control node version for asdf
-- Print node version in Docker build
-- Update vue ecosystem (#77)
-
-## [0.0.5] - 2025-09-10
-
-### Changed
-
-- Merge pull request #80 from danneleaf/main
-
-### Fixed
-
-- Resolve bug that creates error when publishing through tag, closes #79
-
-## [0.0.4] - 2025-09-10
-
-### Added
-
 - Add script for repeating the same command until failure
 - Add specific claims in vp_token request
 - Support same device redirect from wallet to verifier
@@ -421,9 +49,145 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Add missing newline at end of file
 - Add missing newline at end of file
 - Add login and pid presentation
+- Add github workflows
 
 ### Changed
 
+- Use the lab's Forge CI layer
+- Name the snapshot and release flows as the other projects do
+- Name the snapshot flow release-snapshot-workflow.yml
+- Report SAST findings without failing the pull request
+- Migrate workflows to forge-ci
+- Merge pull request #172 from diggsweden/renovate/npm-happy-dom-vulnerability
+- Bump dependencies to avoid vulnerabilities
+- Update dependency happy-dom to v21 [security]
+- Merge pull request #173 from diggsweden/renovate/dev-dependencies
+- Sync package lock
+- Update dev dependencies
+- Merge pull request #170 from diggsweden/fix/renovate-npm-package-lock
+- Docs/document demo mode (#171)
+- Merge pull request #169 from diggsweden/renovate/dev-dependencies
+- Update dev dependencies
+- Use response mode direct_post.jwt
+- Make lighter gray text more accessible
+- Improve ux
+- Create a realistic grocery scenario
+- Create a realistic vaccination scenario
+- Merge pull request #167 from diggsweden/chore/bump-source-map-js
+- Bump source-map-js to version 1.2.2
+- Merge pull request #166 from diggsweden/renovate/testing-dependencies
+- Sync .nuxtrc
+- Update dependency @nuxt/test-utils to v4.3.3
+- Merge pull request #164 from diggsweden/renovate/lock-file-maintenance
+- Update npm dependencies
+- Merge pull request #163 from diggsweden/renovate/testing-dependencies
+- Update dependency @vue/test-utils to v2.5.1
+- Merge pull request #161 from diggsweden/renovate/testing-dependencies
+- Pin dependencies
+- Merge pull request #160 from diggsweden/chore/update-npm-dependencies
+- Update npm dependencies
+- Use global fetch to retrieve verifier status
+- Reset state before each test instead of after
+- Update dependency vitest to v4.1.11 [security] (#159)
+- Merge pull request #158 from diggsweden/chore/bump-vitejs-plugin-vue-to-6.0.8
+- Bump @vitejs/plugin-vue to 6.0.8
+- Update package-lock.json
+- Update vue ecosystem
+- Merge pull request #154 from diggsweden/fix/client-logger-browser-safe
+- Merge pull request #151 from diggsweden/fix/update-vct-payload
+- Update vct payload
+- Merge pull request #136 from diggsweden/renovate/nginx-alpine
+- Update nginx:alpine docker digest to 4a73073
+- Merge pull request #150 from diggsweden/fix/remove-mise-paranoid-setting
+- Merge pull request #147 from diggsweden/renovate/vue-ecosystem
+- Update vue ecosystem
+- Update payload structure for eudi backend v0.11.0 (#148)
+- Update dependency postcss to v8.5.23 [security] (#149)
+- Update dependency postcss to v8.5.18 [security] (#145)
+- Merge pull request #144 from diggsweden/renovate/vue-ecosystem
+- Update vue ecosystem
+- Update diggsweden/reusable-ci action to v2.8.3 (#141)
+- Merge pull request #140 from diggsweden/build/use-node-version-26
+- Explicitly allow install scripts of node dependencies
+- Use node version 26
+- Merge pull request #108 from diggsweden/renovate/actions-setup-node-6.x
+- Update actions/setup-node action to v6
+- Merge pull request #139 from diggsweden/chore/bump-vitest-to-4.1.0
+- Move nuxt/test-utils to dev dependencies
+- Bump vitest to 4.1.0
+- Merge pull request #138 from diggsweden/fix/address-opengrep-issues
+- Ignore IntelliJ project file
+- Merge pull request #137 from diggsweden/feat/add-new-logg
+- Pin dependency @vue/test-utils to 2.4.6 (#135)
+- Update dependency vitest to v3.2.6 [security] (#132)
+- Merge pull request #133 from diggsweden/chore/update-codeowners
+- Bump reusable-ci to v2.8.2
+- Update dependency postcss to v8.5.10 [security] (#130)
+- Merge pull request #129 from diggsweden/fix/use-main-version-of-reusable-integration
+- Merge pull request #128 from diggsweden/chore/update-copyright
+- Update copyright year to 2026
+- Update copyright holder
+- Merge pull request #127 from diggsweden/chore/bump-reusable-integration-workflow
+- Bump reusable integration workflow
+- Merge pull request #126 from diggsweden/chore/bump-reusable-integration-workflow
+- Bump gommitlint to 0.9.10, switch rumdl from ubi to aqua
+- Bump reusable-ci to v2.7.9
+- Feature/vp token parser multiple credentials (#124)
+- Merge pull request #122 from diggsweden/fix/container-file-not-found
+- Merge pull request #123 from diggsweden/feature/ecosystem-integration-test
+- Use reusable ecosystem integration workflow
+- Update dependency happy-dom to v20.8.9 [security] (#121)
+- Update dependency happy-dom to v20.8.8 [security] (#120)
+- Scorecard should not have ref field
+- Use reuseable ci v2.7.3
+- Upgrade to reusable-ci 2.7.1
+- Upgrade to reusable-ci 2.7
+- Merge pull request #115 from diggsweden/chore/update-verifier-image
+- Update eudi-srv-verifier-endpoint to v0.8.0
+- Feat/matcentralen (#114)
+- Merge pull request #113 from diggsweden/feat/address-query
+- Update matcentralen DCQL query with address
+- Bump workflows to use reusable-ci v2.6.1 (#112)
+- Multiple demo apps support
+- Merge pull request #110 from diggsweden/feat/make-it-more-demoable
+- Rebrand strumpsorteringscentralen and examplify additions of new services
+- Update tailwind ecosystem (#106)
+- Update actions/checkout action to v4.3.1 (#105)
+- Pin dependencies (#104)
+- Pin dependencies (#103)
+- Update node.js to be08b7d (#68)
+- Lock file maintenance (#74)
+- Update nginx:alpine docker digest to 1d13701 (#93)
+- Migrate config renovate.json (#95)
+- Migrate dependency happy-dom to v20 [security] (#101)
+- Merge pull request #99 from diggsweden/feat/small-improvements
+- Make the verify page more responsive
+- Use reuseable ci 2.6.0
+- Change name, improve dev doc
+- Sync package lock json
+- Update justfile and reuseableci
+- Pin sha and version
+- Trim renovate, openssf
+- Adjust settings
+- Use base renovate config
+- Use reuseable-ci v2
+- Use reusable-ci v1
+- Update dependency tailwindcss to v4.1.14 (#92)
+- Update dependency typescript to v5.9.3 (#91)
+- Update docker/login-action action to v3.6.0 (#90)
+- Merge pull request #87 from danneleaf/main
+- Update dependency nuxt to v3.19.2 (#86)
+- Set license as precondition to test
+- Change old spdx header to modern
+- Replace obsolete ci jobs, governance
+- Update step-security/harden-runner action to v2.13.1 (#84)
+- Update dependency nuxt-qrcode to v0.4.8 (#83)
+- Merge pull request #82 from diggsweden/chore/backport-bump-node-image
+- Version control node version for nvm
+- Version control node version for asdf
+- Print node version in Docker build
+- Update vue ecosystem (#77)
+- Merge pull request #80 from danneleaf/main
 - Merge pull request #76 from diggsweden/bugfix/backport-revert-nuxt-v4
 - Update dependency nuxt to v4.1.1 (#75)
 - Update dependency tailwindcss to v4.1.13 (#73)
@@ -494,9 +258,39 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Make all commands relative to repository root
 - Document option for running in WLS on Digg
 - Auto format
+- Release v0.0.3
+- Release v0.0.2
+- Release v0.0.1
+- Merge pull request #5 from jahwag/main
+- Initial commit
 
 ### Fixed
 
+- Leave the ecosystem integration workflow out of the trial
+- Sync package lock
+- Configure renovate to run npm install twice
+- Sync npm package lock
+- Sync package lock
+- Sync package lock
+- Sync package lock
+- Cover client logger console output
+- Log to browser console instead of node streams
+- Use correct pattern
+- Sync package lock file
+- Update package lock after renovate changes
+- Set minimum release age for npm dependencies
+- Set minimum release age for npm dependencies
+- Restrict HTTP upgrade to websockets only
+- Exclude test sources from OpenGrep scanning
+- Exclude GitHub workflow files from OpenGrep scanning
+- Assert log messages
+- Use main version of reusable integration script
+- Bump reusable integration workflow
+- Bump release-dev-workflow to 2.7.6
+- Change default backend host to match wallet-ecosystem
+- Correct lintwarning justfile mise
+- Correct lintwarnings for docs, container,nvmrc
+- Resolve bug that creates error when publishing through tag, closes #79
 - Revert "chore(deps): update vue ecosystem (#50)"
 - Revert "chore(deps): update vue ecosystem (#72)"
 - Revert "chore(deps): update dependency nuxt to v4.1.1 (#75)"
@@ -528,9 +322,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Pass Nexus parameters to EUDI verifier build
 - Exclude EUDI verifier proxy cert from version control
 - Run wallet enterprise verifier on non-conflicting port
+- Update publishimage.yml
+- Publishimage.yml
+- Exclude false positive gitleak (#6)
 
 ### Removed
 
+- Remove mise paranoid setting
+- Remove depreacted npm setting 'always-auth'
 - Remove curl from image
 - Remove ineffective Gitleaks rule
 - Remove instructions for using WSL as dev environment
@@ -540,70 +339,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Remove trailing whitespace
 - Remove trailing whitespace
 
-## [0.0.3] - 2025-06-13
 
-### Changed
-
-- Release v0.0.3
-
-### Fixed
-
-- Update publishimage.yml
-
-## [0.0.2] - 2025-06-13
-
-### Changed
-
-- Release v0.0.2
-
-### Fixed
-
-- Publishimage.yml
-
-## [0.0.1] - 2025-06-13
-
-### Added
-
-- Add github workflows
-
-### Changed
-
-- Release v0.0.1
-- Merge pull request #5 from jahwag/main
-- Initial commit
-
-### Fixed
-
-- Exclude false positive gitleak (#6)
-
-[0.1.19]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.18..v0.1.19
-[0.1.18]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.17..v0.1.18
-[0.1.17]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.16..v0.1.17
-[0.1.16]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.15..v0.1.16
-[0.1.15]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.14..v0.1.15
-[0.1.14]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.13..v0.1.14
-[0.1.13]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.12..v0.1.13
-[0.1.12]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.11..v0.1.12
-[0.1.11]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.10..v0.1.11
-[0.1.10]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.9..v0.1.10
-[0.1.9]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.8..v0.1.9
-[0.1.8]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.7..v0.1.8
-[0.1.7]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.6..v0.1.7
-[0.1.6]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.5..v0.1.6
-[0.1.5]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.4..v0.1.5
-[0.1.4]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.3..v0.1.4
-[0.1.3]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.2..v0.1.3
-[0.1.2]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.1..v0.1.2
-[0.1.1]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.1.0..v0.1.1
-[0.1.0]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.0.10..v0.1.0
-[0.0.10]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.0.9..v0.0.10
-[0.0.9]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.0.8..v0.0.9
-[0.0.8]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.0.7..v0.0.8
-[0.0.7]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.0.6..v0.0.7
-[0.0.6]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.0.5..v0.0.6
-[0.0.5]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.0.4..v0.0.5
-[0.0.4]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.0.3..v0.0.4
-[0.0.3]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.0.2..v0.0.3
-[0.0.2]: https://github.com/diggsweden/wallet-verifier-test-web/compare/v0.0.1..v0.0.2
 
 <!-- generated by git-cliff -->
